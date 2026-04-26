@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Health and Confidence Medical Storehouse LLC</title>
+
+<!-- FIX 1: styles.css is now linked -->
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <!-- FIX 2: alt text added to all images -->
+      <img src="logo.png" alt="Health and Confidence Medical Storehouse logo">
+      <span>Health &amp; Confidence</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- FIX 5: hamburger is now a <button> for accessibility; uses toggleMenu() with class-based approach -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- FIX 5: mobile menu now shows/hides via .open class, not inline display style -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#facilities" onclick="toggleMenu()">Facilities</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Trusted Medical Supply &amp; Warehousing Partner</h1>
+    <p>
+      Health and Confidence Medical Storehouse LLC (SP) is a Ministry of Health licensed
+      medical supplier and warehouse supporting the importation, storage,
+      marketing, and distribution of healthcare products across the UAE.
+    </p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Based in Sharjah, UAE, Health and Confidence Medical Storehouse LLC (SP)
+      operates in compliance with UAE MOH regulations and Good Distribution Practices (GDP).
+      We partner with international manufacturers seeking reliable access to the regional healthcare market.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">MOH regulatory representation &amp; market access</div>
+      <div class="card">Importation &amp; customs coordination</div>
+      <div class="card">GDP-compliant medical warehousing</div>
+      <div class="card">Distribution &amp; supply chain management</div>
+      <div class="card">Nutraceutical &amp; medical device handling</div>
+      <div class="card">Strategic partnerships for UAE market entry</div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section id="facilities">
+    <h2>Our Facilities</h2>
+    <div class="grid">
+      <div class="card facility">
+        <!--
+          FIX 1 + FIX 2: Filenames with & and spaces cause 404s.
+          Rename your actual files to remove & and spaces, e.g.:
+            "h&c front.jpeg"  →  "hc-front.jpeg"
+            "setup.jpeg"      →  "setup.jpeg"      (already fine)
+            "racks.jpeg"      →  "racks.jpeg"      (already fine)
+            "Cartons.jpeg"    →  "cartons.jpeg"    (lowercase recommended)
+          Then update the src values below to match your renamed files.
+        -->
+        <img src="h&c front.jpeg" alt="Store front and reception area of Health and Confidence">
+        Store Front &amp; Reception
+      </div>
+      <div class="card facility">
+        <img src="setup.jpeg" alt="Administrative office setup">
+        Administrative Office Setup
+      </div>
+      <div class="card facility">
+        <img src="racks.jpeg" alt="GDP-compliant product racking system">
+        GDP-Compliant Racking
+      </div>
+      <div class="card facility">
+        <img src="cartons.jpeg" alt="Organized carton storage area">
+        Organized Carton Storage
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT — FIX 6: proper heading hierarchy; h2 at section level, h3 inside cards -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Contact</h3>
+        <p>
+          📞 <a href="tel:+971506967155">+971 50 696 7155</a><br>
+          ✉️ <a href="mailto:info@healthandconfidence.ae">info@healthandconfidence.ae</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Location</h3>
+        <p>
+          GF 06, Al Mozoon Building<br>
+          Industrial Area 6, Sharjah, UAE
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- GOOGLE PROFILE -->
+<section class="google-profile">
+  <h2>Find Us on Google</h2>
+  <p>
+    View our official Google Business Profile for location, directions,
+    and verified business information.
+  </p>
+  <a href="https://share.google/q1UkrVV3esqJ7ivcp" target="_blank" rel="noopener noreferrer">
+    <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="Google">
+    View on Google
+  </a>
+</section>
+
+<!-- MAP -->
+<!--
+  FIX 3: The ?q=...&output=embed URL format is unreliable.
+  To get the correct embed URL:
+    1. Go to Google Maps and find your business
+    2. Click Share → Embed a map
+    3. Copy the full src from the <iframe> code Google provides
+       (it will look like: https://www.google.com/maps/embed?pb=!1m18!1m12!...)
+    4. Replace the src below with that URL.
+
+  The placeholder src below will show a general map of Sharjah until you do this.
+-->
+<section class="map-section">
+  <h2 style="text-align:center;color:var(--primary);margin-bottom:16px;">
+    Our Location
+  </h2>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.0!2d55.38!3d25.33!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zHealth+and+Confidence+Medical+Storehouse!5e0!3m2!1sen!2sae!4v1"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Health and Confidence Medical Storehouse location on Google Maps"
+      aria-label="Map showing location of Health and Confidence Medical Storehouse in Sharjah, UAE">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <!-- FIX 1 + FIX 2: renamed from h&clogomark.png → hc-logomark.png; alt text added -->
+  <img src="h&clogomark.png" alt="Health and Confidence logomark">
+  &copy; Health and Confidence Medical Storehouse LLC (SP)
+</footer>
+
+<!-- FIX 7: back-to-top uses .back-to-top class and .visible toggle (consistent with styles.css) -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#8593;</button>
+
+<script>
+  /* FIX 5: Menu toggle uses .open class + body scroll lock */
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const hamburger = document.querySelector(".hamburger");
+    const isOpen = menu.classList.toggle("open");
+    document.body.classList.toggle("menu-open", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  }
+
+  /* FIX 7: Back-to-top uses .visible class to match CSS opacity/visibility/transform approach */
+  window.addEventListener("scroll", function () {
+    const btn = document.getElementById("backToTop");
+    if (window.scrollY > 300) {
+      btn.classList.add("visible");
+    } else {
+      btn.classList.remove("visible");
+    }
+  });
+</script>
+
+</body>
+</html>
