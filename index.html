@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Health and Confidence Medical Storehouse LLC</title>
+
+<style>
+:root {
+  --primary:#4a3f8c;
+  --accent:#6f63b6;
+  --text:#1f1f1f;
+  --muted:#666;
+  --bg:#fafafa;
+  --card:#ffffff;
+  --border:#e5e5ee;
+}
+
+/* RESET */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
+.nav-container{
+  max-width:1150px;
+  margin:auto;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.nav-brand img{height:52px}
+.nav-brand span{
+  font-weight:600;
+  color:var(--primary);
+  font-size:1rem;
+}
+.nav-links{
+  display:flex;
+  gap:26px;
+}
+.nav-links a{
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+}
+.nav-links a:hover{color:var(--accent)}
+
+/* HAMBURGER */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+}
+.hamburger span{
+  height:3px;
+  width:26px;
+  background:var(--text);
+  margin-bottom:5px;
+  border-radius:3px;
+}
+
+/* MOBILE MENU */
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:#fff;
+  border-top:1px solid var(--border);
+}
+.mobile-menu a{
+  padding:14px 20px;
+  text-decoration:none;
+  color:var(--text);
+  border-bottom:1px solid var(--border);
+}
+
+/* LAYOUT */
+.container{
+  max-width:1150px;
+  margin:auto;
+  padding:40px 20px;
+}
+section{margin-bottom:60px}
+h2{
+  color:var(--primary);
+  font-size:1.45rem;
+  margin-bottom:14px;
+}
+p{color:var(--muted);margin-bottom:14px}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#f4f3f9,#fff);
+  padding:50px 30px;
+  border-radius:22px;
+  border:1px solid var(--border);
+  text-align:center;
+}
+.hero h1{
+  font-size:2.2rem;
+  color:var(--primary);
+  margin-bottom:16px;
+}
+
+/* GRID / CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+.card{
+  background:var(--card);
+  padding:26px;
+  border-radius:18px;
+  border:1px solid var(--border);
+  font-size:.95rem;
+}
+.facility img{
+  width:100%;
+  border-radius:14px;
+  margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 20px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:.9rem;
+}
+footer img{
+  max-width:120px;
+  margin-bottom:10px;
+  opacity:.85;
+}
+
+/* BACK TO TOP */
+#topBtn{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:12px 14px;
+  border-radius:50%;
+  font-size:18px;
+  cursor:pointer;
+  display:none;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero h1{font-size:1.8rem}
+}
+
+.google-profile {
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:30px;
+  text-align:center;
+  max-width:900px;
+  margin:60px auto 0;
+}
+.google-profile h2 {
+  margin-bottom:10px;
+}
+.google-profile p {
+  margin-bottom:18px;
+}
+.google-profile a {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 20px;
+  border-radius:30px;
+  background:#1a73e8;
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+}
+.google-profile a:hover {
+  opacity:0.9;
+}
+.google-profile img {
+  width:22px;
+  height:22px;
+}
+
+.map-section {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.map-container {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  height: 420px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <img src="logo.png">
+      <span>Health & Confidence</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#facilities" onclick="toggleMenu()">Facilities</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Trusted Medical Supply & Warehousing Partner</h1>
+  <p>
+    Health and Confidence Medical Storehouse LLC (SP) is a Ministry of Health licensed
+    medical supplier and warehouse supporting the importation, storage,
+    marketing, and distribution of healthcare products across the UAE.
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Based in Sharjah, UAE, Health and Confidence Medical Storehouse LLC (SP)
+    operates in compliance with UAE MOH regulations and Good Distribution Practices (GDP).
+    We partner with international manufacturers seeking reliable access to the regional healthcare market.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">MOH regulatory representation & market access</div>
+    <div class="card">Importation & customs coordination</div>
+    <div class="card">GDP-compliant medical warehousing</div>
+    <div class="card">Distribution & supply chain management</div>
+    <div class="card">Nutraceutical & medical device handling</div>
+    <div class="card">Strategic partnerships for UAE market entry</div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities">
+  <h2>Our Facilities</h2>
+  <div class="grid">
+    <div class="card facility">
+      <img src="h&c front.jpeg">
+      Store Front & Reception
+    </div>
+    <div class="card facility">
+      <img src="setup.jpeg">
+      Administrative Office Setup
+    </div>
+    <div class="card facility">
+      <img src="racks.jpeg">
+      GDP-Compliant Racking
+    </div>
+    <div class="card facility">
+      <img src="Cartons.jpeg">
+      Organized Carton Storage
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="grid">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>📞 +971 50 696 7155<br>✉️ info@healthandconfidence.ae</p>
+  </div>
+  <div class="card">
+    <h2>Location</h2>
+    <p>
+      GF 06, Al Mozoon Building<br>
+      Industrial Area 6, Sharjah, UAE
+    </p>
+  </div>
+</section>
+
+</div>
+
+<section class="google-profile">
+  <h2>Find Us on Google</h2>
+  <p>
+    View our official Google Business Profile for location, directions,
+    and verified business information.
+  </p>
+
+  <a href="https://share.google/q1UkrVV3esqJ7ivcp" target="_blank" rel="noopener">
+    <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="Google">
+    View on Google
+  </a>
+</section>
+
+<section class="map-section">
+  <h2 style="text-align:center; color:var(--primary); margin-bottom:16px;">
+    Our Location
+  </h2>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=Health%20And%20Confidence%20Medical%20Storehouse%20LLC%20Sharjah&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      aria-label="Health and Confidence Medical Storehouse location on Google Maps">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <img src="h&clogomark.png">
+  © Health and Confidence Medical Storehouse LLC (SP)
+</footer>
+
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function toggleMenu(){
+  const menu=document.getElementById("mobileMenu");
+  menu.style.display=menu.style.display==="flex"?"none":"flex";
+}
+
+window.onscroll=function(){
+  document.getElementById("topBtn").style.display=
+    window.scrollY>300?"block":"none";
+}
+</script>
+
+</body>
+</html>
