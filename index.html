@@ -221,8 +221,8 @@
           <div class="contact-icon">🕐</div>
           <div>
             <strong>Business Hours</strong><br>
-            Sunday - Thursday: 8:00 AM - 6:00 PM<br>
-            Friday - Saturday: Closed
+            Mon-Fri: 8:00 AM to 4:00 PM<br>
+            Saturday &amp; Sunday: Closed
           </div>
         </div>
       </div>
@@ -268,7 +268,7 @@
     <a href="#facilities">Facilities</a>
     <a href="#contact">Contact</a>
   </div>
-  &copy; 2024 Health and Confidence Medical Storehouse LLC (SP). All rights reserved.
+  &copy; <span id="footerYear"></span> Health and Confidence Medical Storehouse LLC (SP). All rights reserved.
 </footer>
 
 <!-- FIX 7: back-to-top uses .back-to-top class and .visible toggle (consistent with styles.css) -->
@@ -299,6 +299,9 @@
       btn.classList.remove("visible");
     }
   });
+
+  /* Dynamic footer year */
+  document.getElementById("footerYear").textContent = new Date().getFullYear();
 </script>
 
 </body>
