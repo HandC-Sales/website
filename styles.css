@@ -293,8 +293,8 @@ p{color:var(--muted);margin-bottom:16px}
   line-height:1.6;
 }
 
-/* FACILITIES */
-.facilities-grid{
+/* FACILITY */
+.facility-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:24px;
@@ -446,7 +446,7 @@ p{color:var(--muted);margin-bottom:16px}
   padding:48px;
   text-align:center;
   max-width:900px;
-  margin:60px auto 0;
+  margin:30px auto 0;
 }
 .google-profile h2{margin-bottom:12px}
 .google-profile p{
@@ -604,4 +604,6 @@ footer img{
   .stat-number{font-size:2rem}
   .google-profile{padding:32px 20px}
   .map-container{height:350px}
+  .about-stats{grid-template-columns:1fr}
+  .stat-box{padding:24px 20px; min-height:140px}
 }
