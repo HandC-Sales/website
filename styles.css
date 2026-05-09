@@ -316,6 +316,10 @@ p{color:var(--muted);margin-bottom:16px}
   object-fit:cover;
   transition:transform 0.3s ease;
 }
+.product-images .facility-card img{
+  height:auto;
+  object-fit:contain;
+}
 .facility-card:hover img{transform:scale(1.05)}
 .facility-info{
   padding:20px;
@@ -323,6 +327,15 @@ p{color:var(--muted);margin-bottom:16px}
 .facility-info h3{
   margin:0;
   font-size:1.05rem;
+}
+.product-item h3{
+  color:var(--primary);
+  font-size:1.25rem;
+  margin-bottom:18px;
+}
+.product-images{
+  display:grid;
+  gap:24px;
 }
 
 /* ABOUT */
